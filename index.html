@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nike Air Max | Premium Store</title>
+  <!-- Google Fonts: Outfit (Display) and Inter (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-red">
+  <!-- Glowing background effect -->
+  <div class="glow-sphere"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <a href="#" class="logo">
+      <!-- Nike Swoosh SVG -->
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M21 6.5c-1.3 1.2-3.8 2.8-7.5 4.3-3 1.2-6.5 2-9.5 2-1 0-1.8-.2-2-.5-.3-.3-.2-1 .3-1.8.6-1.1 1.8-2.6 3.5-4.2 1-.9 2-1.7 2.8-2.2.3-.2.6-.1.7.2.1.2 0 .5-.3.8-.9.9-2 2-3.2 3.3-.8.9-1.5 1.7-1.8 2.3 1.4-.4 3.7-1.3 6.6-2.5 4.2-1.7 8.5-4.1 11.2-5.7.5-.3.9-.2.8.3-.1.6-.3 1.3-.6 2z" />
+      </svg>
+    </a>
+    <nav class="nav-links" id="navbar-links">
+      <a href="#" class="active" data-category="all">New Releases</a>
+      <a href="#" data-category="men">Men</a>
+      <a href="#" data-category="women">Women</a>
+      <a href="#" data-category="kids">Kids</a>
+      <a href="#" data-category="customize">Customize</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn search-trigger" aria-label="Search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </button>
+      <!-- Wishlist Trigger -->
+      <button class="icon-btn wishlist-trigger" id="wishlist-btn" aria-label="Wishlist">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+        </svg>
+        <span class="cart-badge" id="wishlist-count" style="background-color: #ff3366;">0</span>
+      </button>
+
+      <button class="icon-btn cart-trigger" id="cart-btn" aria-label="Cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <path d="M16 10a4 4 0 0 1-8 0"></path>
+        </svg>
+        <span class="cart-badge" id="cart-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Hero Customizer -->
+  <section class="hero" id="hero">
+    <!-- Huge background font for aesthetic watermark -->
+    <div class="watermark-bg">AIR MAX</div>
+
+    <div class="hero-content">
+      <div class="hero-left">
+        <span class="tagline">LIMITLESS ENERGY</span>
+        <h1 class="hero-title">NIKE AIR MAX<br><span class="highlight-text">COMFORT REIMAGINED</span></h1>
+        <p class="hero-description">
+          Step into tomorrow. Featuring our revolutionary dual-pressure Air unit and lightweight woven mesh upper, the Nike Air Max offers bounce and structural support where you need it most.
+        </p>
+
+        <!-- Customizer Controls -->
+        <div class="customizer-panel">
+          <!-- Color selection -->
+          <div class="color-picker-wrapper">
+            <span class="control-label">Select Color:</span>
+            <div class="color-options">
+              <button class="color-opt active red" data-color="red" data-img="assets/nike_red.png" aria-label="Red and Black"></button>
+              <button class="color-opt blue" data-color="blue" data-img="assets/nike_blue.png" aria-label="Blue and Black"></button>
+              <button class="color-opt volt" data-color="volt" data-img="assets/nike_volt.png" aria-label="Volt Green and Grey"></button>
+            </div>
+          </div>
+
+          <!-- Size selection -->
+          <div class="size-picker-wrapper">
+            <span class="control-label">Select Size (US):</span>
+            <div class="size-options" id="hero-size-options">
+              <button class="size-opt">7</button>
+              <button class="size-opt">8</button>
+              <button class="size-opt active">9</button>
+              <button class="size-opt">10</button>
+              <button class="size-opt">11</button>
+            </div>
+          </div>
+          
+          <!-- Stock status indicator -->
+          <div id="hero-stock-status"></div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="cta-group">
+          <div class="price-tag" id="hero-price">₹14,999.00</div>
+          <button class="btn btn-primary" id="hero-add-to-cart">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+            <span>Add to Cart</span>
+          </button>
+          <button class="btn-wishlist-hero" id="hero-wishlist" aria-label="Add hero item to wishlist">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="hero-wishlist-heart">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Hero Right: Dynamic Shoe Showcase -->
+      <div class="hero-right">
+        <div class="card-glow"></div>
+        <img src="assets/nike_red.png" id="hero-shoe" class="hero-shoe-img" alt="Nike Air Max Crimson Red">
+      </div>
+    </div>
+  </section>
+
+  <!-- Trending Products Catalog -->
+  <section class="products-section" id="catalog">
+    <div class="section-header">
+      <h2>Trending Sneaker Designs</h2>
+      <p>Explore Nike's latest releases built for speed, agility, and absolute style.</p>
+    </div>
+
+    <div class="products-grid" id="products-grid">
+      <!-- Dynamic products will be rendered here by app.js -->
+    </div>
+  </section>
+
+  <!-- Slide-out Shopping Cart Drawer -->
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-content">
+      <div class="cart-header">
+        <h2>Your Bag</h2>
+        <button class="close-cart" id="close-cart" aria-label="Close Bag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Cart list -->
+      <div class="cart-items" id="cart-items-list">
+        <!-- Dynamic cart items will be rendered here -->
+      </div>
+
+      <!-- Cart Footer -->
+      <div class="cart-footer">
+        <div class="summary-line">
+          <span>Subtotal</span>
+          <span id="cart-subtotal">$0.00</span>
+        </div>
+        <div class="summary-line tax-ship">
+          <span>Estimated Shipping & Handling</span>
+          <span>Free</span>
+        </div>
+        <button class="btn btn-primary btn-checkout" id="checkout-btn">Proceed to Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide-out Wishlist Drawer -->
+  <div class="wishlist-drawer" id="wishlist-drawer">
+    <div class="wishlist-overlay" id="wishlist-overlay"></div>
+    <div class="wishlist-content">
+      <div class="wishlist-header">
+        <h2>Your Wishlist</h2>
+        <button class="close-wishlist" id="close-wishlist" aria-label="Close Wishlist">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Wishlist items list -->
+      <div class="wishlist-items" id="wishlist-items-list">
+        <!-- Dynamic wishlist items will be rendered here -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Notification Toast -->
+  <div id="toast" class="toast hidden">Item added to your Bag!</div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2026 Nike, Inc. All Rights Reserved. Crafted by Antigravity</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
