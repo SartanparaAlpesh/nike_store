@@ -109,15 +109,14 @@ body {
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.logo svg {
+.logo-img {
   height: 24px;
   width: auto;
-  color: #ffffff;
-  transition: color var(--transition-fast), transform var(--transition-fast);
+  display: block;
+  transition: transform var(--transition-fast);
 }
 
-.logo:hover svg {
-  color: var(--accent);
+.logo:hover .logo-img {
   transform: scale(1.05);
 }
 
