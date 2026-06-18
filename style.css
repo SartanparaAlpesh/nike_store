@@ -1399,6 +1399,7 @@ body {
 
   .logo {
     margin-bottom: 0;
+    order: 1; /* Keep logo first */
   }
 
   .nav-links {
@@ -1425,6 +1426,7 @@ body {
     display: flex;
     align-items: center;
     gap: 0.8rem;
+    order: 2; /* Keep actions next to the logo on the first row */
   }
 
   /* Hero adjustments */
