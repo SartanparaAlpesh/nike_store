@@ -1388,22 +1388,24 @@ body {
 @media (max-width: 768px) {
   /* Navigation */
   .navbar {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
     padding: 1rem 4%;
-    gap: 1rem;
-    position: relative;
+    gap: 0.75rem;
     background: rgba(10, 35, 80, 0.98);
   }
 
   .logo {
-    margin-bottom: 0.2rem;
+    margin-bottom: 0;
   }
 
   .nav-links {
     width: 100%;
+    order: 3; /* Push links to a new row below the logo and action buttons */
     justify-content: center;
-    gap: 1.5rem;
+    gap: 1.25rem;
     overflow-x: auto;
     white-space: nowrap;
     padding-bottom: 0.5rem;
@@ -1420,9 +1422,8 @@ body {
   }
 
   .nav-actions {
-    position: absolute;
-    top: 1rem;
-    right: 4%;
+    display: flex;
+    align-items: center;
     gap: 0.8rem;
   }
 
